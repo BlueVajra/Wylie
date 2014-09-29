@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["cory.leistikow@gmail.com"]
   spec.summary       = "Converts EWTS into Tibetan Unicode Characters"
   spec.description   = "See above"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/BlueVajra/Wylie"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

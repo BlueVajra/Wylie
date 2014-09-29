@@ -61,7 +61,6 @@ module Wylie
         expect(converter.tibetan("dam pa'i chos ")).to eq "དམ་པའི་ཆོས་"
         expect(converter.tibetan("'jigs byed ")).to eq "འཇིགས་བྱེད་"
         expect(converter.tibetan("snyam rtsom ")).to eq "སྙམ་རྩོམ་"
-        expect(converter.tibetan("gur guM")).to eq "གུར་གུཾ"
         expect(converter.tibetan("bkris ")).to eq "བཀྲིས་"
         expect(converter.tibetan("lo tsA ba ")).to eq "ལོ་ཙཱ་བ་"
         expect(converter.tibetan("dzam+b+ha ")).to eq "ཛམྦྷ་"
@@ -69,7 +68,20 @@ module Wylie
       end
 
       it "adds ending character if one doesn't exist for multiple syllables" do
+        converter = Converter.new
         expect(converter.tibetan("snyam rtsom")).to eq "སྙམ་རྩོམ་"
+      end
+
+      it "converts the .ya properly" do
+        pending
+        converter = Converter.new
+        expect(converter.tibetan("g.yo")).to eq "གཡོ"
+      end
+
+      it "handles alternate final consonants" do
+        pending
+        converter = Converter.new
+        expect(converter.tibetan("gur guM")).to eq "གུར་གུཾ"
       end
 
     end
