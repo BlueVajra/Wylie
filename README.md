@@ -18,11 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can just write `converter = Wylie::Converter.new` and then `converter.tibetan("bsgrubs ")`. the output will be a Tibetan encoded string.
+
+You can also use a helper in a rails app to convert wylie in your views
+
+```ruby
+module TibetanHelper
+
+  TIBETAN_CONVERTER = Wylie::Converter.new
+
+  def to_tibetan(phrase)
+    TIBETAN_CONVERTER.tibetan(phrase)
+  end
+  
+end
+```
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/wylie/fork )
+1. Fork it ( http://github.com/bluevajra/wylie/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
