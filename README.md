@@ -1,6 +1,12 @@
 # Wylie
 
-TODO: Write a gem description
+This is a EWTS (Extended Wylie Transliteration Scheme) converter. You can find more information about EWTS here: http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts
+
+It will take a string in this EWTS and output the Unicode Tibetan
+
+`bsgrubs => བསྒྲུབས་`
+
+This is a work in progress, and the varieties of errors that can happen are hard to predict. So if you find any bugs, please contact me via GitHub or add a bug to the issues tracker and I will address them ASAP
 
 ## Installation
 
